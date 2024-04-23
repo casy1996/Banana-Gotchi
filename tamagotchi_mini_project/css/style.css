@@ -4,18 +4,52 @@
 }
 
 html {
-    background-color: aliceblue;
+    background-color: rgb(36, 36, 46);
+    /* background-image: url(https://i.postimg.cc/SsPvv7DG/tp206-07.jpg) */
+    /* background-image: url(https://i.postimg.cc/7h2J3w5N/tp206-07-fotor-2024042301857.jpg); */
+    /* background-image: url(https://i.postimg.cc/9MFnQXxz/image.jpg); */
+    background-image: url(https://i.postimg.cc/jqnGw2xJ/istockphoto-1208374725-612x612.jpg);
+    /* background-size: cover; */
+    background-size: 100% 110%;
+    /* opacity: 0.75; */
+    /* border-radius: 20px; */
 }
 
 h1 {
-    font-size: 30px;
-    color: skyblue;
+    font-size: 60px;
+    color: rgba(196, 137, 230, 0.768);
+    text-shadow: 2px 2px rgb(236, 210, 17);
+    padding: 40px 0px 0px 0px;
 }
 
-body{
-    background-color: white;
-    margin: 200px;
-    height: 60vh;
+body {
+    /*use background-color to set theme. best results with red/purple/blues */
+    background-color: rgb(59, 64, 98);
+    outline: solid;
+    outline-color: rgba(248, 228, 80, 0.948);
+    outline-width: 4px;
+    /* background-image: url(https://i.postimg.cc/HLJJDbmL/istockphoto-1356593868-612x612.jpg); */
+    /* background-image: url(https://i.postimg.cc/9MFnQXxz/image.jpg); */
+    /* background-size: cover; */
+    /* opacity: 0.85; */
+    margin: 200px auto;
+    height: 80vh;
+    max-width: 700px;
+    min-width: 600px auto;
+    border-radius: 50%;
+}
+
+#screen {
+    justify-content: center;
+    background-color: rgba(225, 228, 230, 0.65);
+    color: rgba(0,0,0,0);
+    outline: solid;
+    outline-color: rgb(72, 72, 72);
+    outline-width: 2px;
+    border-radius: 30px;
+    width: 65%;
+    height: 55%;
+    margin: auto;
 }
 
 h1 {
@@ -25,11 +59,57 @@ h1 {
 h3 {
     text-align: center;
     color: rgb(81, 81, 81);
+    padding: 0px 0px 35px 0px;
 
 }
 
+#nanaCat {
+    position: absolute;
+    width: 13%;
+    height: 16%;
+    right: 380px;
+    bottom: 160px;
+}
+
 .deviceButtons {
+    /* background-color: lightpink; */
+    display: flex;
+    justify-content: space-between;
     text-align: center;
+    position: relative;
+    margin: auto;
+    width: 50%;
+    bottom: -45px;
+    height: 35px;
+    /* position: absolute; */
     /* display: flex; */
     /* flex-direction: row-reverse; */
+}
+
+#selector {
+    background-color: rgb(238, 193, 228);
+    /* box-shadow: 0px 2px 1px 2px rgba(255, 221, 0, 0.6); */
+    outline: dotted;
+    outline-color: rgb(255, 200, 0);
+    outline-width: 6px;
+    border-radius: 50%;
+    width: 40px;
+}
+
+#executor {
+    background-color: rgb(238, 193, 228);
+    outline: dotted;
+    outline-color: rgba(255, 200, 0, 1);
+    outline-width: 6px;
+    border-radius: 50%;
+    width: 40px;
+}
+
+#cancel {
+    background-color: rgb(238, 193, 228);
+    outline: dotted;
+    outline-color: rgba(255, 200, 0, 1);
+    outline-width: 6px;
+    border-radius: 50%;
+    width: 40px;
 }
