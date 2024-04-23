@@ -16,10 +16,31 @@ html {
 }
 
 h1 {
-    font-size: 60px;
-    color: rgba(196, 137, 230, 0.768);
+    font-size: 62px;
+    color: rgba(210, 137, 230, 0.768);
     text-shadow: 2px 2px rgb(236, 210, 17);
-    padding: 40px 0px 0px 0px;
+    padding: 44px 0px 0px 0px;
+    text-align: center;
+}
+
+h3 {
+    text-align: center;
+    font-size: 21px;
+    color: rgb(217, 217, 217);
+    padding: 5px 0px 3px 0px;
+
+}
+
+#instruction {
+    position: relative;
+    /* text-wrap: balance; */
+    text-align: center;
+    color: white;
+    max-width: 65%;
+    left: 18%;
+    font-size: 15px;
+    padding: 0px 0px 19px 0px;
+
 }
 
 body {
@@ -33,7 +54,7 @@ body {
     /* background-size: cover; */
     /* opacity: 0.85; */
     margin: 200px auto;
-    height: 80vh;
+    height: 82vh;
     max-width: 700px;
     min-width: 600px auto;
     border-radius: 50%;
@@ -48,27 +69,23 @@ body {
     outline-width: 2px;
     border-radius: 30px;
     width: 65%;
-    height: 55%;
+    height: 50%;
     margin: auto;
 }
 
-h1 {
-    text-align: center;
-}
-
-h3 {
-    text-align: center;
-    color: rgb(81, 81, 81);
-    padding: 0px 0px 35px 0px;
-
-}
+/* .characters {
+    position: relative;
+    justify-content: center;
+} */
 
 #nanaCat {
     position: absolute;
-    width: 13%;
-    height: 16%;
-    right: 380px;
-    bottom: 160px;
+    width: 12%;
+    height: 18%;
+    /* right: 380px;
+    bottom: 160px; */
+    right: 45%;
+    bottom: 17%;
 }
 
 .deviceButtons {
