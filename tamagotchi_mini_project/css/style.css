@@ -25,8 +25,8 @@ h1 {
 
 h3 {
     text-align: center;
-    font-size: 21px;
-    color: rgb(217, 217, 217);
+    font-size: 22px;
+    color: rgb(230, 230, 230);
     padding: 5px 0px 3px 0px;
 
 }
@@ -35,7 +35,7 @@ h3 {
     position: relative;
     /* text-wrap: balance; */
     text-align: center;
-    color: white;
+    color: rgba(255, 255, 255, 0.932);
     max-width: 65%;
     left: 18%;
     font-size: 15px;
@@ -45,9 +45,10 @@ h3 {
 
 body {
     /*use background-color to set theme. best results with red/purple/blues */
-    background-color: rgb(59, 64, 98);
+    /* background-color: rgb(59, 64, 98); */
+    background: linear-gradient(to bottom, rgb(59, 64, 98) 25%, rgb(81, 58, 170) 55%, rgb(47, 47, 98) 100%);
     outline: solid;
-    outline-color: rgba(248, 228, 80, 0.948);
+    outline-color: rgba(199, 179, 24, 0.948);
     outline-width: 4px;
     /* background-image: url(https://i.postimg.cc/HLJJDbmL/istockphoto-1356593868-612x612.jpg); */
     /* background-image: url(https://i.postimg.cc/9MFnQXxz/image.jpg); */
@@ -62,10 +63,10 @@ body {
 
 #screen {
     justify-content: center;
-    background-color: rgba(225, 228, 230, 0.65);
+    background-color: rgba(225, 228, 230, 0.74);
     color: rgba(0,0,0,0);
     outline: solid;
-    outline-color: rgb(72, 72, 72);
+    outline-color: rgb(136, 119, 36);
     outline-width: 2px;
     border-radius: 30px;
     width: 65%;
@@ -81,12 +82,135 @@ body {
 #nanaCat {
     position: absolute;
     width: 12%;
-    height: 18%;
+    height: 20%;
     /* right: 380px;
     bottom: 160px; */
-    right: 45%;
-    bottom: 17%;
+    right: 51%;
+    bottom: 18%;
+    animation: walk 8000ms infinite, jump 1500ms infinite;
 }
+
+/* .movement {
+    transition-duration: 500ms;
+    transform: translate(200px);
+    transition-timing-function: linear;
+} */
+
+@keyframes walk {
+    0% {
+        transform: translateX(0px) rotate(0);
+      }
+      15% {
+        transform: translateX(100px) translateY(0);
+      }
+      20% {
+        transform: translateX(100px) translateY(-50px);
+      }
+      25% {
+        transform: translateX(100px) translateY(0);
+      }
+      35% {
+        transform: translateX(210px) rotate(0deg);
+      }
+      50% {
+        transform: translateX(210px) rotateY(180deg);
+      }
+      60% {
+        transform: translateX(100px) rotateY(180deg) translateY(0);
+      }
+      65% {
+        transform: translateX(100px) rotateY(180deg) translateY(-50px);
+      }
+      70% {
+        transform: translateX(100px) rotateY(180deg) translateY(0px);
+      }
+      80% {
+        transform: translateX(0px) rotateY(180deg);
+      }
+      90% {
+        transform: translateX(0px) rotateY(180deg);
+      }
+      100% {
+        transform: translateX(0px) rotateY(0);
+      }
+}
+    /* 25% {
+        transform: translateX(240px);
+    }
+    50% {
+        transform: rotateY(180deg);
+    }
+    60% {
+        transform: rotateY(180deg);
+    } */
+    /* 30% {
+        transform: translateX(240px); translateY(-60px);
+    }
+    61% {
+        transform: translateY(0px);
+    } */
+
+
+/* @keyframes jump {  
+    25% {
+        transform: translateX(100px) translateY(-50px);
+    }
+    40% {
+        transform: translateX(100px) translateY(-50px);
+    }
+    95% {
+        transform: translateX(100px) translateY(0px);
+    }
+} */
+    /* 60% {
+        transform: translateY(-40px);
+    } */
+    /* 70% {
+        transform: translateY(0px);
+    } */
+    /* 60% {
+        transform: translateY(-40px);
+    } */
+    /* 20% {
+        transform: translateX(150px);
+    }
+    45% {
+        transform: translateY(-30px);
+    }
+    46% {
+        transform: translateY(0px);
+    }
+    60% {
+        transform: translateX(20px);
+    } */
+
+
+    /* 0% {
+        from: 0;
+    }
+    10% {
+        transform: translateX(100px) rotate(0);
+    }
+    20% {
+        transform: translateX(100px) translateY(40px) rotate(0)
+    }
+    25% {
+        transform: translateY(0px) rotate(0);
+    }
+    40% {
+        transform: translateX(300px) rotate(180);
+    } */
+    /* 100% {
+        transform: translateY(40px) rotate(0);
+    } */
+    /* 100% {
+        transform: translateY(0px) rotate(0);
+    } */
+    /* 100% {
+        transform: translateX(200px) rotate(0);
+    } */
+    
+
 
 .deviceButtons {
     /* background-color: lightpink; */
@@ -104,6 +228,7 @@ body {
 }
 
 #selector {
+    color: rgba(138, 25, 131, 0.688);
     background-color: rgb(238, 193, 228);
     /* box-shadow: 0px 2px 1px 2px rgba(255, 221, 0, 0.6); */
     outline: dotted;
@@ -114,6 +239,7 @@ body {
 }
 
 #executor {
+    color: rgba(138, 25, 131, 0.688);
     background-color: rgb(238, 193, 228);
     outline: dotted;
     outline-color: rgba(255, 200, 0, 1);
@@ -123,10 +249,57 @@ body {
 }
 
 #cancel {
+    color: rgba(138, 25, 131, 0.688);
     background-color: rgb(238, 193, 228);
     outline: dotted;
     outline-color: rgba(255, 200, 0, 1);
     outline-width: 6px;
     border-radius: 50%;
     width: 40px;
+}
+
+#keyTitle {
+    color: black;
+    text-align: center;
+    padding: 5px 0px 5px 20px;
+}
+
+
+#buttonKey {
+    position: fixed;
+    font-size: 16px;
+    background-color: rgba(255, 255, 255, 0.9);
+    margin: auto;
+    padding: 0px 20px 0px 0px;
+    /* top: 80%; */
+    /* left: 0.3%; */
+    left: -228px;
+    /* top: 50%; */
+    top: 75%;
+    color: black;
+    outline: solid;
+    outline-color: rgb(255, 255, 255);
+}
+
+#mainButtons {
+    padding: 10px 0px 0px 0px;
+}
+
+
+#hideKey  {
+    background-color: grey;
+    color: rgb(255, 255, 255);
+    outline: solid;
+    outline-color: rgb(175, 175, 175);
+    outline-width: 1px;
+    position: relative;
+    left: 112%;
+    top: 2px;
+    width: 65%;
+}
+
+.hideAnimation:active {
+    transition-duration: 400ms;
+    transform: translate(235px);
+    transition-timing-function: linear;
 }

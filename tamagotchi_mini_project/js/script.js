@@ -67,7 +67,13 @@ const  bananaCat = new Tamagotchi ("Nyanner", 0, 10, 10, 10)
 
 
 
+//Button to show/hide the Tamagotchi Button Key
 
+// function hideAnimation() {
+
+// }
+    
+// document.getElementById("hideKey").addEventListener("click", hideAnimation())
 
 
 

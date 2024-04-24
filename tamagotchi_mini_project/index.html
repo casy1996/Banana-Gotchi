@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/Tamagotchi/tamagotchi_mini_project/css/style.css">
-    <script src="/Tamagotchi/tamagotchi_mini_project/js/script.js" defer></script>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
     <title>Tamagotchi by Christopher Sy</title>
 </head>
 
 <body>
     <h1 id="gameTitle">Tamagotchi</h1>
     <h3 id="howTo">How to play</h3>
-    <p id="instruction">Your Tamagotchi ages over time. At age 20, they will evolve. If your Tamagotchi gets too bored, hungry, or tired they will run away.</p>
+    <p id="instruction">Your Tamagotchi ages over time and evolves at age 20. Evolved Tamagotchis require more care. If your Tamagotchi gets too bored, hungry, or tired they will run away.</p>
     <div class="characters">
-        <img id="nanaCat" src="https://i.postimg.cc/765YT4hY/banana-cat1-1.png">
+        <img id="nanaCat" class="movement" src="https://i.postimg.cc/765YT4hY/banana-cat1-1.png">
     </div>
 
     <div id="screen">
@@ -41,12 +41,20 @@
         <button id="feedButton" type="button" alt="Feed">Feed</button>
         <button id="playButton" type="button" alt="Play">Play</button>
         <button id="cleanButton" type="button" alt="Clean">Clean</button> -->
-        <button id="selector" type="button" alt="Select"></button></button>
-        <button id="executor" type="button" alt="Execute"></button></button>
+        <button id="selector" type="button" alt="Select">A</button></button>
+        <button id="executor" type="button" alt="Execute">B</button></button>
         <!--Using the classic 3 buttons from OG Tamagotchi, rather than having a log, that shows increments in a chat format, we have tamagotchi screen change depending on what we are doing. -->
-        <button id="cancel" type="button" alt="Cancel"></button></button>
+        <button id="cancel" type="button" alt="Cancel">C</button></button>
     </div>
-
+    <div id="buttonKey" class="hideAnimation">
+        <h3 id="keyTitle">Button Key</h3>
+        <ol type="A">
+            <li>Scroll through the actions</li>
+            <li>Select action</li>
+            <li>Back/Cancel</li>
+        </ol>
+        <button id="hideKey" type="button" alt="toggleKey">Hold to Show Button Functions</button>
+    </div>
 
 </body>
 </html>
