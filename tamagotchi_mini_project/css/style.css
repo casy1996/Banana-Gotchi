@@ -55,7 +55,7 @@ body {
     /* background-size: cover; */
     /* opacity: 0.85; */
     margin: 200px auto;
-    height: 82vh;
+    height: 86vh;
     max-width: 700px;
     min-width: 600px auto;
     border-radius: 50%;
@@ -68,7 +68,7 @@ body {
     outline: solid;
     outline-color: rgb(136, 119, 36);
     outline-width: 2px;
-    border-radius: 30px;
+    border-radius: 30px 30px 5px 5px;
     width: 65%;
     height: 50%;
     margin: auto;
@@ -87,6 +87,8 @@ body {
     bottom: 160px; */
     right: 51%;
     bottom: 16%;
+    /* filter: hue-rotate(160deg); */
+    filter: hue-rotate();
     animation: walk 8000ms infinite, jump 1500ms infinite;
 }
 
@@ -210,12 +212,8 @@ body {
         transform: translateX(200px) rotate(0);
     } */
     
-#gameText {
-    background-color: rgba(255, 225, 225, 0.4);
-    display: flex;
-    margin: auto;
-    width: 60%;
-}
+
+
 
 .deviceButtons {
     /* background-color: lightpink; */
@@ -225,7 +223,7 @@ body {
     position: relative;
     margin: auto;
     width: 50%;
-    bottom: 16px;
+    bottom: 24px;
     height: 35px;
     /* position: absolute; */
     /* display: flex; */
@@ -319,7 +317,7 @@ body {
     position: relative;
     margin: auto;
     width: 60%;
-    top: -48.5%;
+    top: -51.5%;
 }
 
 #tamaStats {
@@ -388,3 +386,19 @@ body {
     outline-width: 2px;
     outline-color: rgba(0,0,0,0);
 }
+
+#gameText {
+    background-color: rgba(255, 225, 225, 0.55);
+    /* position: absolute; */
+    display: flex;
+    margin: auto;
+    width: 453px;
+    height: 18px;
+    border-radius: 2px 2px 5px 5px;
+    color: black;
+    font-size: 13px;
+}
+
+/* #tamaChat {
+    height: 18px;
+} */
