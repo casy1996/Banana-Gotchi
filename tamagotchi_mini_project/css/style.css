@@ -86,7 +86,7 @@ body {
     /* right: 380px;
     bottom: 160px; */
     right: 51%;
-    bottom: 18%;
+    bottom: 16%;
     animation: walk 8000ms infinite, jump 1500ms infinite;
 }
 
@@ -104,7 +104,7 @@ body {
         transform: translateX(100px) translateY(0);
       }
       20% {
-        transform: translateX(100px) translateY(-50px);
+        transform: translateX(100px) translateY(-40px);
       }
       25% {
         transform: translateX(100px) translateY(0);
@@ -119,7 +119,7 @@ body {
         transform: translateX(100px) rotateY(180deg) translateY(0);
       }
       65% {
-        transform: translateX(100px) rotateY(180deg) translateY(-50px);
+        transform: translateX(100px) rotateY(180deg) translateY(-40px);
       }
       70% {
         transform: translateX(100px) rotateY(180deg) translateY(0px);
@@ -210,7 +210,12 @@ body {
         transform: translateX(200px) rotate(0);
     } */
     
-
+#gameText {
+    background-color: rgba(255, 225, 225, 0.4);
+    display: flex;
+    margin: auto;
+    width: 60%;
+}
 
 .deviceButtons {
     /* background-color: lightpink; */
@@ -220,7 +225,7 @@ body {
     position: relative;
     margin: auto;
     width: 50%;
-    bottom: -45px;
+    bottom: 16px;
     height: 35px;
     /* position: absolute; */
     /* display: flex; */
@@ -302,4 +307,84 @@ body {
     transition-duration: 400ms;
     transform: translate(235px);
     transition-timing-function: linear;
+}
+
+.tamaActions {
+    display: flex;
+    justify-content: space-around;
+    /* position: absolute; */
+    /* top: 48%;
+    left: 40%; */
+    /* text-align: center; */
+    position: relative;
+    margin: auto;
+    width: 60%;
+    top: -48.5%;
+}
+
+#tamaStats {
+    /* position: absolute; */
+    height: 55px;
+    width: 55px;
+    /* top: 48%;
+    left: 32%; */
+    border-radius: 15%;
+    /* background-color: rgb(226, 226, 226); */
+    /* background-color: red; */
+    outline: solid;
+    outline-width: 2px;
+    outline-color: rgba(0,0,0,0);
+}
+
+#tamaPlay {
+    /* position: absolute; */
+    height: 55px;
+    width: 55px;
+    /* top: 48%;
+    left: 44%; */
+    border-radius: 15%;
+    /* background-color: rgb(226, 226, 226); */
+    /* background-color: blue; */
+    outline: solid;
+    outline-width: 2px;
+    outline-color: rgba(0,0,0,0);
+}
+
+#tamaEat {
+    /* position: absolute; */
+    height: 55px;
+    width: 55px;
+    /* top: 48%;
+    left: 38%; */
+    border-radius: 15%;
+    /* background-color: rgb(226, 226, 226); */
+    outline: solid;
+    outline-width: 2px;
+    outline-color: rgba(0,0,0,0);
+}
+
+#tamaSleep {
+    /* position: absolute; */
+    height: 55px;
+    width: 55px;
+    /* top: 48%;
+    left: 50%; */
+    border-radius: 15%;
+    /* background-color: rgb(226, 226, 226); */
+    outline: solid;   
+    outline-width: 2px;
+    outline-color: rgba(0,0,0,0);
+}
+
+#tamaLove {
+    /* position: absolute; */
+    height: 55px;
+    width: 55px;
+    /* top: 48%;
+    left: 56%; */
+    border-radius: 15%;
+    background-color: rgb(119, 119, 119);
+    outline: solid;
+    outline-width: 2px;
+    outline-color: rgba(0,0,0,0);
 }
