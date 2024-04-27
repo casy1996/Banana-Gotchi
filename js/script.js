@@ -17,11 +17,13 @@ class Tamagotchi {
         this.love = love
         //property for evolution alert, set to false - after method sends alert, value changes to true
         this.evolved = false;
+        //force rename() on startup of page
+        // this.rename();
     }
     //create a selectable element for each method
     //method to change default name to any name user wants
     rename() {
-        let newName = prompt("Name your Tamagotchi. Keep empty if you'd like to keep the name Nyanner")
+        let newName = prompt("Welcome to Tamagotchi (Banana Cat version). Name your Tamagotchi here; otherwise, skip to keep the name Nyanner. Enjoy!")
         if (newName) {
             this.name = newName;
         }
@@ -32,8 +34,8 @@ class Tamagotchi {
 
         if (this.happiness < 0 || this.fullness < 0 || this.energy < 0 || this.love < 0) {
             gameText.value = (`${this.name} felt neglected and ran away. Refresh to play again.`);
-            //added evolve = false here so that if this runs, tamagotchi can no longer evolve if it hasnt yet
-            this.evolved = false;
+            //added evolve = true here so that if this runs, tamagotchi can no longer evolve if it hasnt yet. evolve = true makes sure that the !this.evolve is never true
+            this.evolved = true;
             alert("Your Tamagotchi ran away. Refresh to restart the game.")
         }
         //if === 20, player may not check stats exactly at 20 so changed to >20
@@ -49,8 +51,11 @@ class Tamagotchi {
     play() {
         //conditional so that max stat is 20
         if (this.happiness < 20) {
-        this.happiness++;
-        gameText.value = (`${this.name}'s happiness went up by 1. Happiness = ${this.happiness}`)
+            this.happiness++;
+            gameText.value = (`You played with catch with ${this.name}! Happiness +1 (${this.happiness}/20)`)
+        }
+        if (this.happiness === 20) {
+            gameText.value = (`${this.name} swats the ball away. Take a break for now. (${this.happiness}/20)`)
         }
         // console.log(`${this.name}'s happiness went up by 1. Happiness = ${this.happiness += 1}/10`)
         // console.log(`${this.name}'s happiness went up by 1. Happiness = ${this.happiness}`)
@@ -59,8 +64,11 @@ class Tamagotchi {
     feed() {
         //conditional so that max stat is 20
         if (this.fullness < 20) {
-        this.fullness++;
-        gameText.value = (`${this.name}'s fullness went up by 1. Fullness = ${this.fullness}`)
+            this.fullness++;
+            gameText.value = (`You gave ${this.name} a yummy snack! Fullness +1 (${this.fullness}/20)`)
+        }
+        if (this.fullness === 20) {
+            gameText.value = (`${this.name}'s seems full but you know they'll be hungry again shortly. (${this.fullness}/20)`)
         }
         // console.log(`${this.name}'s fullness went up by 1. Fullness = ${this.fullness += 1}/10`)
         // console.log(`${this.name}'s fullness went up by 1. Fullness = ${this.hunger}`)
@@ -69,8 +77,11 @@ class Tamagotchi {
     lights() {
         //conditional so that max stat is 20
         if (this.energy < 20) {
-        this.energy++;
-        gameText.value = (`${this.name}'s energy went up by 1. Energy = ${this.energy}`)
+            this.energy++;
+            gameText.value = (`${this.name} looks so cute resting. Quick, take a picture! Energy +1 (${this.energy}/20)`)
+        }
+        if (this.energy === 20) {
+            gameText.value = (`${this.name} has full energy and decided its zoomies time!!! (${this.energy}/20)`)
         }
         // console.log(`${this.name}'s energy went up by 1. Energy = ${this.energy += 1}/10`)
         // console.log(`${this.name}'s energy went up by 1. Energy = ${this.energy}`)
@@ -78,8 +89,11 @@ class Tamagotchi {
     hug() {
         //conditional so that max stat is 20
         if (this.love < 20) {
-        this.love++;
-        gameText.value = (`${this.name}'s love went up by 1. Love = ${this.love}`)
+            this.love++;
+            gameText.value = (`Cuddle up with ${this.name}. Love +1 (${this.love}/20)`)
+        }
+        if (this.love === 20) {
+            gameText.value = (`${this.name} is overstimulated. Let them go before they attack! (${this.love}/20)`)
         }
         // console.log(`${this.name}'s love went up by 1. Love = ${this.love += 1}/10`)
         // console.log(`${this.name}'s love went up by 1. Love = ${this.love}`)
@@ -105,12 +119,12 @@ class Tamagotchi {
             this.age++;
             console.log(`${this.name} is now ${this.age}`);
         }
-        , 9000);
+        , 5000);
         //call decreaseStat() to work every X seconds
         setInterval(() => {
             this.decreaseStat();
         }
-        , 7500);
+        , 10000);
     }
     //if hunger,sleepiness,boredom = 0, tamagotchi runs away, prompt restart
 
@@ -132,6 +146,8 @@ class Tamagotchi {
     // Scratch this method, add it to sayStats.
 }
 
+//Want to enable Love only if tamagotchi is evolved
+
 // class Evolution extends Tamagotchi {
 //     constructor() {
         
@@ -143,12 +159,10 @@ class Tamagotchi {
 
 // const appleCat = new Tamagotchi ("Meowple", 1, 5, 5, 5)
 const bananaCat = new Tamagotchi ("Nyanner", 0, 8, 8, 8, 8)
-//invoke time(), evolve()
+//invoke time() and decreaseStat() although, this does not seem to affect functionality
 bananaCat.time();
 bananaCat.decreaseStat();
 //remove invoke evolve() - discarded method
-// bananaCat.evolve();
-
 
 //select between Meowple and Nyanner
 //allow player to rename
@@ -229,7 +243,6 @@ const nyanner = document.getElementById("nanaCat")
 //     selection.style.outlineColor = selection.style.outlineColor ""
 
 
-
 //Trying another method, create an array of the action button IDs. 
 
 const actionIds = ["tamaStats", "tamaPlay", "tamaEat", "tamaSleep", "tamaLove"];
@@ -237,19 +250,23 @@ const actionIds = ["tamaStats", "tamaPlay", "tamaEat", "tamaSleep", "tamaLove"];
 //Selector was highlighting icons correctly, but the execute button was one index ahead.
 //(Highlighted tamaStats, but runs tamaPlay)
 //Trial error changing actionIndex and increment (in actionIndex +) inside the selector button.
-// let negIndex = 1 - (1*2)
-// let actionIndex = negIndex;
 //setting index to -1 seems like it would work- where first click would add 1 and start index = 0, but selector button no longer works when value set to -1
 let actionIndex = 0;
 
 selectorButton.addEventListener("click", function() {
     actionIds.forEach(id => {
+        // make the outline color go back after we move to the next element
         document.getElementById(id).style.outlineColor = "rgba(0, 0, 0, 0)";
+
+        //same but for backgroundColor instead
+        document.getElementById(id).style.backgroundColor = "rgba(0, 0, 0, 0)";
     });
-    //add the above function to make the outline color go back after we move to the next element
 
     //for each index in the array, change the outline color
-    document.getElementById(actionIds[actionIndex]).style.outlineColor = "rgb(226, 226, 226)";
+    document.getElementById(actionIds[actionIndex]).style.outlineColor = "rgb(226, 226, 226, 0.95)";
+
+    //same but for backgroundColor instead or if we wanted both
+    document.getElementById(actionIds[actionIndex]).style.backgroundColor = "rgba(226, 226, 226, 0.45)";
         //loop back to the beginning of array, after reaching the end
     actionIndex = (actionIndex + 1) % actionIds.length;
 });
@@ -312,10 +329,17 @@ executorButton.addEventListener("click", function() {
 
 
 //Button to show/hide the Tamagotchi Button Key
-// function hideAnimation() {
-// }
-// document.getElementById("hideKey").addEventListener("click", hideAnimation())
 
+// function hideKey() {
+//     const buttonKey = document.getElementById("buttonKey")
+//     const hideButton = document.getElementById("hideKey")
+    
+document.getElementById("hideKey").addEventListener("click", hideAnimation())
+
+
+
+
+// Resize tamagotchi when browser is full size
 
 
 
