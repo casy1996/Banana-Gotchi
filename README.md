@@ -1,2 +1,2 @@
 # Tamagotchi
-Interactive digital tamagotchi pet
+Interactive tamagotchi-like pet application.
